@@ -1,0 +1,15 @@
+pipeline {
+    agent {
+        docker {
+            image 'node:latest'
+            args '-p 9090:9090'
+        }
+    } 
+    stages {
+        stage('Deliver') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+            }
+        }
+    }
+}
