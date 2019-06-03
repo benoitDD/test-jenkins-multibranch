@@ -1,3 +1,3 @@
-set +x
+set +x 
 echo "toto"
-set -x
+set -x 
